@@ -16,4 +16,5 @@ def get_user_input():
     print("Oops! That is not a valid input.")
     get_user_input()
 
-get_user_input()
+if __name__ == "__main__":
+  get_user_input()
