@@ -20,7 +20,6 @@ def ask_for_input():
 
   check_guess(guess)
 
-print(word_to_guess)
 ask_for_input()
 
 
