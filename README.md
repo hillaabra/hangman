@@ -23,6 +23,8 @@ WHAT HAVE I LEARNT ON THE WAY:
 
 ## Usage instructions
 
+Make it clear that the user only gets 5 wrong letter guesses.
+
 ## File structure
 
 ## License information
