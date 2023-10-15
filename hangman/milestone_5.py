@@ -111,7 +111,7 @@ class Hangman():
     prompted to re-input their guess until the input
     is valid.
     '''
-    print(self.word_guessed)
+    print(" ".join(self.word_guessed))
 
     while True:
       guessed_letter = input("Guess a letter: ")
