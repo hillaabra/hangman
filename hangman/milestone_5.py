@@ -1,5 +1,7 @@
 import random
 
+from word_list import word_list
+
 class Hangman():
   '''
   A Hangman Game that asks the user for a letter and checks if it is in the word.
@@ -106,7 +108,7 @@ class Hangman():
       print(f"Sorry, {guessed_letter} is not in the word.\nYou have {self.num_lives} lives left.")
 
   @staticmethod
-  def check_if_input_valid(guessed_letter):
+  def _check_if_input_valid(guessed_letter):
     '''
     This function is used internally to check if
     the user input is a single alphabetical character.
@@ -134,7 +136,7 @@ class Hangman():
 
     while True:
       guessed_letter = input("Guess a letter: ")
-      if self.check_if_input_valid(guessed_letter) == False:
+      if self._check_if_input_valid(guessed_letter) == False:
         print("Invalid letter. Please, enter a single alphabetical character.")
       elif guessed_letter in self._ls_guessed_letters:
         print("You already tried that letter!")
@@ -174,4 +176,4 @@ def initialise_game(word_list):
   game.play_game()
 
 if __name__ == "__main__":
-  initialise_game(["lychee", "passionfruit", "cherry", "pomegranate", "nectarine"])
+  initialise_game(word_list)
