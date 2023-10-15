@@ -34,7 +34,7 @@ cd hangman
 The game is run in the command line without options. To view the project documentation, run the following command on the command line from inside the inner `hangman` directory:
 
 ```
-python -m pydoc milestone_5.py
+python -m pydoc milestone_5
 ```
 
 ## How to play
