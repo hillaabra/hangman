@@ -140,4 +140,5 @@ def initialise_game(word_list):
   game = Hangman(word_list)
   game.play_game()
 
-initialise_game(["lychee", "passionfruit", "cherry", "pomegranate", "nectarine"])
+if __name__ == "__main__":
+  initialise_game(["lychee", "passionfruit", "cherry", "pomegranate", "nectarine"])
