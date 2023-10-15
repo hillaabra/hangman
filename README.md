@@ -18,6 +18,7 @@ WHAT HAVE I LEARNT ON THE WAY:
 - How to use set operations to determine unique elements
 - How to use `while True:` loops to continue prompting for user input until the user input is inputted correctly
 - How to maintain version control using git and GitHub.
+- I abstracted the processes in the two methods and defined access levels in the methods and attributes of the class.
 
 ## Installation instructions
 
