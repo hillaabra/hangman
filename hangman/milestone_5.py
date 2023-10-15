@@ -145,6 +145,10 @@ class Hangman():
         break
 
   def play_game(self):
+    '''
+    This function starts and ends the game
+    when the player either wins or loses.
+    '''
     while True:
       if self.num_lives == 0:
         print(f"You lost! The word was {self.__word_to_guess}")
@@ -156,6 +160,16 @@ class Hangman():
         break
 
 def initialise_game(word_list):
+  '''
+  This function creates a game instance of the
+  Hangman class and initialises the game.
+
+  Arguments:
+  ---------
+  word_list: list
+      A list of words from which the Hangman object
+      will choose at random the word to be guessed.
+  '''
   game = Hangman(word_list)
   game.play_game()
 
