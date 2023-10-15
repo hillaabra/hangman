@@ -16,16 +16,27 @@ class Hangman():
     # a list of guesses, initially set to an empty list
     self._ls_guessed_letters = []
 
-  def _check_for_guessed_letter_in_word(self, guessed_letter):
-    guessed_letter = guessed_letter.lower()
-    if guessed_letter in self.__word_to_guess:
-      print(f"Good guessed_letter! {guessed_letter} is in the word.")
-      for index in self.__word_to_guess:
+  def _update_word_guessed(self, guessed_letter):
+    for index in self.__word_to_guess:
         if self.__word_to_guess[index] == guessed_letter:
          self.word_guessed[index] = guessed_letter
-      self.__num_letters_left_to_guess -= 1
+
+  def _update_num_letters_left_to_guess(self):
+    self.__num_letters_left_to_guess -= 1
+
+  def _update_num_lives(self):
+    self.num_lives -= 1
+
+  def _update_ls_guessed_letters(self, guessed_letter):
+    self._ls_guessed_letters.append(guessed_letter)
+
+  def _check_for_guessed_letter_in_word(self, guessed_letter):
+    if guessed_letter in self.__word_to_guess:
+      print(f"Good guessed_letter! {guessed_letter} is in the word.")
+      self._update_word_guessed(guessed_letter)
+      self._update_num_letters_left_to_guess()
     else:
-      self.num_lives -= 1
+      self._update_num_lives()
       print(f"Sorry, {guessed_letter} is not in the word.\nYou have {self.num_lives} left.")
 
   def check_if_input_valid(guessed_letter):
@@ -39,8 +50,9 @@ class Hangman():
       elif guessed_letter in self._ls_guessed_letters:
         print("You already tried that letter!")
       else:
+        guessed_letter = guessed_letter.lower()
         self._check_for_guessed_letter_in_word(guessed_letter)
-        self._ls_guessed_letters.append(guessed_letter)
+        self._update_ls_guessed_letters(guessed_letter)
 
 test_game = Hangman(["lychee", "passionfruit", "cherry", "flat peach", "nectarine"])
 test_game.ask_for_input()
