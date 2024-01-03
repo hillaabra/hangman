@@ -2,6 +2,7 @@ import random
 
 from word_list import word_list
 
+
 class Hangman():
   '''
   A Hangman Game that asks the user for a letter and checks if it is in the word.
@@ -174,6 +175,7 @@ def initialise_game(word_list):
   '''
   game = Hangman(word_list)
   game.play_game()
+
 
 if __name__ == "__main__":
   initialise_game(word_list)
