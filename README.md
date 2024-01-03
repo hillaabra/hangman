@@ -1,6 +1,13 @@
 # Hangman
 
-> Python Project - [AiCore](https://www.theaicore.com/) (October 2023)
+*Python Project - [AiCore](https://www.theaicore.com/) (October 2023)*
+
+
+![Static Badge](https://img.shields.io/badge/Skills%20%26%20Knowledge-A8B78B) ![Static Badge](https://img.shields.io/badge/Object%20oriented%20programming-8A2BE2) ![Static Badge](https://img.shields.io/badge/User%20input-8A2BE2) ![Static Badge](https://img.shields.io/badge/Error%20handling-8A2BE2) ![Static Badge](https://img.shields.io/badge/Documentation-8A2BE2)
+
+![Static Badge](https://img.shields.io/badge/Languages,%20Tools%20%26%20Libraries-A8B78B)  ![Static Badge](https://img.shields.io/badge/Python-8A2BE2) ![Static Badge](https://img.shields.io/badge/Command%20line-8A2BE2) ![Static Badge](https://img.shields.io/badge/Git-8A2BE2) ![Static Badge](https://img.shields.io/badge/GitHub-8A2BE2)
+
+**The brief for this project was to build a CLI implementation of the classic Hangman game using object oriented programming in Python.**
 
 ## Overview
 
@@ -11,11 +18,9 @@ This is an implementation of the Hangman game played on the command line, where 
 In doing this project, I had the opportunity to implement principles of object-oriented programming - such as classes, encapsulation and abstraction - as well as fundamentals of creating programs in Python like importing modules and executing files directly and indirectly while being aware of the built-in `__name__` variable.
 
 ## File structure
-- **milestone_5.py** contains the game logic
+- **hangman.py** contains the game logic
 - **word_list.py** is a module containing the list of words
   - *The list in this module currently only consists of five words to test the game logic, but any words of your choosing can be added to that list*
-
-The other .py files in this repo are earlier iterations of code or template files from AiCore which I have left as they are in case they are required for the marking of my project on submission.
 
 ## Installation instructions
 
@@ -31,17 +36,17 @@ cd hangman
 
 ## Usage
 
-The game is run in the command line without options. To view the project documentation, run the following command on the command line from inside the inner `hangman` directory:
+The game is run in the command line without options. To view the project documentation, run the following command on the command line from inside the `hangman` directory:
 
 ```
-python -m pydoc milestone_5
+python -m pydoc hangman
 ```
 
 ## How to play
 
 Start a game of Hangman by running the following command from inside the inner `hangman` directory:
 ```
-$ python milestone_5.py
+$ python hangman.py
 ```
 
 A word will be chosen at random from the `word_list` module and presented as a series of `_`, with each underscore representing a letter of the word, e.g. if the word chosen is 'apple', to begin with, you will see:
