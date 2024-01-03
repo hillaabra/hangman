@@ -68,8 +68,3 @@ If you guess all the letters in the word, you win the game.
 If you guess a letter that you've already guessed, this won't affect your score, but you will be prompted to guess again until you guess a letter you haven't yet guessed in the current game.
 
 Once the game ends, you can play again by re-running the same command above in the command line.
-
-
-## License
-
-This project is currently unlicensed as it has not yet been made public.
