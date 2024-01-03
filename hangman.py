@@ -154,12 +154,14 @@ class Hangman:
     '''
     while True:
       if self.num_lives == 0:
-        print(f"You lost! The word was {self.__word_to_guess}")
+        print(" ".join(self.word_guessed))
+        print(f'You lost! The word to guess was "{self.__word_to_guess}".')
         break
       elif self.__num_letters_left_to_guess > 0:
         self.ask_for_input()
       else:
-        print("Congratulations! You won!")
+        print(" ".join(self.word_guessed))
+        print(f'\nCongratulations! The word to guess was "{self.__word_to_guess}". You won!')
         break
 
 def initialise_game(word_list):
